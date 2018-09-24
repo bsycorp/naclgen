@@ -1,0 +1,17 @@
+
+service ssh     22/tcp
+service https   443/tcp
+
+zone dmz internal
+zone int internal
+zone mgn internal
+
+rule dmz {
+  < internet https  # internet ingress
+  > int https       # forward proxy
+}
+
+rule mgn {          # manage all the things
+  > dmz ssh
+  > int ssh
+}

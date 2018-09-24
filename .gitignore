@@ -1,0 +1,6 @@
+cover
+.coverage
+*.pyc
+default.wpr
+default.wpu
+__pycache__

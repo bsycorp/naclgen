@@ -1,0 +1,8 @@
+service https 443/tcp
+
+zone a internal
+zone b internal
+
+rule a {
+  > b
+}

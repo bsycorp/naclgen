@@ -1,0 +1,19 @@
+
+zone dmz internal
+zone int internal
+zone mgn internal
+
+rule dmz {
+  < internet 
+  > int
+}
+
+rule int {
+}
+
+rule mgn {
+  > dmz 
+  > int
+}
+
+
