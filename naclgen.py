@@ -471,7 +471,7 @@ def render_tf_singlezone_header(zone_name):
 def render_tf_zone_footer(concrete_zone):
     return """
 
-      tags {{
+      tags = {{
         Name = "{0}.${{local.naclgen_acl_label}}"
       }}
     }}
